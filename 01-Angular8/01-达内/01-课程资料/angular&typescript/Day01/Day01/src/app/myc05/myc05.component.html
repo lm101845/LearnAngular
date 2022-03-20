@@ -1,0 +1,50 @@
+<p>myc05 works!</p>
+
+<!-- 
+  属性的绑定指令
+  vue: v-bind:属性名='值'  简写 :属性名="" 例如 :src="js代码"
+  ng: [属性名]=""
+ -->
+<img [src]="image" alt="" />
+
+<!-- 
+  事件:
+  vue: v-on:事件名="方法名()" @事件名=""  例如 @click=""
+  ng: (事件名)="方法名()"  例如 (click)=""
+ -->
+
+<!-- 
+  强调:
+  vue中 如果方法没有参数, 则可以不写()结尾
+  ng中: 方法必须带有()结尾
+ -->
+<button (click)="show()">点击</button>
+
+<!-- 
+  html文本解析
+  vue中: v-html
+  ng中: [innerHTML]
+ -->
+<div>{{ data }}</div>
+<div [innerHTML]="data"></div>
+
+<!-- 
+  双向数据绑定 
+  vue中:  v-model=""
+  ng中: [(ngModel)]   []代表属性->UI, ()事件触发会影响数据
+-->
+<!-- 单向绑定: 属性 传递到 UI -->
+<!-- 但是用户更改UI时, 并不会影响到数据 -->
+<input type="text" [value]="name" />
+<p>{{ name }}</p>
+
+<!-- 双向写法, 快捷 ng-model -->
+<!-- 
+  双向绑定功能 默认不是必备模块, 所以没有加载; 
+  若要使用, 必须手动加载:  app.module.ts 主配置文件中
+ -->
+<input type="text" [(ngModel)]="name" />
+
+<!-- 
+  UI: user interface  用户界面
+ -->

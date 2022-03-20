@@ -1,0 +1,12 @@
+<p>myc06 works!</p>
+
+<div>
+  <!-- 
+    (click)=""  代表点击时 执行"" 中的代码
+   -->
+  <button (click)="count = count - 1" [disabled]="count <= 1">-</button>
+  <input type="text" [(ngModel)]="count" />
+  <button (click)="doAdd()" [disabled]="count >= 20">+</button>
+</div>
+
+<button disabled>不可用</button>

@@ -1,0 +1,27 @@
+<!--
+ * @Author: liming
+ * @Date: 2022-01-31 18:01:46
+ * @LastEditTime: 2022-03-20 17:08:38
+ * @FilePath: \01-达内\02-代码手敲\myngapp01\src\app\myc05\myc05.component.html
+-->
+<p>myc05生效了！！！！</p>
+<hr>
+<div>用户名：{{uname}}</div>
+<div>用户年龄：{{age}}</div>
+<div>后年年龄：{{age+2}}</div>
+<div>成年了吗：{{age >= 18?'成年了':'未成年'}}</div>
+<div>在法定工作年龄吗？{{age >= 18 && age
+    <=65}}</div>
+        <div>用户名长度：{{uname.length}}</div>
+        <div>用户名大写形式：{{uname.toUpperCase()}}</div>
+        <div>用户名中下标为2的字符：{{uname[2]}}</div>
+        <!-- <div>当前时间：{{new Date()}}</div> -->
+        <!-- 这样写不行，报错 -->
+        <!-- <div>JSON字符串:{{JSON.stringify({})}}</div> -->
+        <!-- 这样写也报错 -->
+        <hr>
+        <p title="{{uname}}">这个是文字</p>
+        <p [title]="uname">这个是文字</p>
+        <hr>
+        <button (click)="printUname()">输出用户名</button>
+        <!-- 注：printUname必须有小括号 -->

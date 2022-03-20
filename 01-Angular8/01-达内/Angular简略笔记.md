@@ -4,3 +4,7 @@
 * 组件外面必须套上`module1`(模块)，和`Vue`不一样，`Angular`是把一些特定功能的组件放到一个模块下进行管理的。
 * `Angualr`里面一个组件就是一个class。
 * `ng g component myc04`可以一下子就生成`html,css,js`，微信小程序应该也是参考的`Angular`的吧。
+* 搭建环境：https://angular.cn/guide/setup-local
+* HTML绑定是{{}}
+* 属性绑定是[]
+* 事件绑定是()
